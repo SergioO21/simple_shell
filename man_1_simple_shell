@@ -1,0 +1,62 @@
+.TH SIMPLE_SHELL 1 "APRIL 14 / 2021" "HOLBERTON SCHOOL CH14"
+
+
+.SH NAME
+
+.B simple_shell 
+- Command interpreter [arguments].
+
+
+.SH SYNOPSYS
+.PP
+.B ./hsh
+- Runs the shell
+
+.SH DESCRIPTION
+Is a command line interpreter that executes commands read from standard input.
+
+
+.SH EXAMPLE:
+
+.SS Compilation.
+- - - - - - -
+.PP
+gcc -Wall -Wextra -Werror -pedantic *.c -o hsh
+
+
+.SS Interactive mode.
+- - - - - - -
+.PP
+.B $
+ls
+
+.B $
+/bin/ls
+
+
+.SS Non-interactive-mode.
+- - - - - - -
+.PP
+echo \*(lq/bin/ls\*(rq | ./hsh
+
+
+
+.SH AUTHOR(S)
+
+.RS
+Sergio Orejarena Rueda.
+.PP
+Jaime Arturo Blanco Gutiérrez.
+.RE
+
+	
+.SH COPYRIGHT
+
+.RS
+Copyright (C) 2020 Holberton School Barranquilla / Colombia.
+.PP
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation, either version 3 of
+the License, or any later version.
+.RE
