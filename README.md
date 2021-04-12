@@ -6,6 +6,11 @@ A simple Unix command line interpreter as a final first quarter project.
 ## Objective.
 Create a simple version of the Unix command line interpreter, with certain system calls allowed. 
 
+## Description.
+
+Is a command line interpreter that executes commands read from standard input.
+
+
 ## Allowed and used system calls and functions.
 
  - [ ] access (man 2 access)
@@ -40,9 +45,6 @@ Create a simple version of the Unix command line interpreter, with certain syste
  - [ ] wait4 (man 2 wait4)
  - [x] write (man 2 write)
 
-## Description.
-
-Is a command line interpreter that executes commands read from standard input.
 
 ## Implemented functions
 
