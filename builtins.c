@@ -22,7 +22,7 @@ int builtins(char **ar)
 	/** env */
 	else if (_strcmp(ar[0], builts[1]) == 0)
 	{
-		for (i = 0; *environ[i] != '\0'; i++)
+		for (i = 0; environ[i] != '\0'; i++)
 		{
 			he = environ[i];
 			size_env = _strlen(he);
