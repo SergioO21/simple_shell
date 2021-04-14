@@ -16,14 +16,11 @@ void _fork(char **ar)
 	if (pid == 0)
 	{
 		if (execve(ar[0], ar, NULL) == -1)
-			perror("Error");
-
-		exit(EXIT_FAILURE);
-
+			perror("Error: execve");
 	}
 
-	else if (pid < 0)
-		perror("Error");
+	else if (pid == -1)
+		perror("Error: Fork failure");
 
 	else
 	{
