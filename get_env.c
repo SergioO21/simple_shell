@@ -23,6 +23,8 @@ char *get_env(void)
 	{
 		for (i = 0; ret[i] != "="; i++)
 			ret++;
+
+		ret++;
 	}
 
 	return (ret);
