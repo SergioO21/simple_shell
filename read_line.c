@@ -17,7 +17,8 @@ char *read_line(void)
 	if (line == EOF)
 	{
 		free(buffer);
-		exit(EXIT_FAILURE);
+		write(STDOUT, "\n", 1);
+		exit(EXIT_SUCCESS);
 	}
 
 	return (buffer);
