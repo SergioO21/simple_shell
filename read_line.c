@@ -17,7 +17,10 @@ char *read_line(void)
 	if (line == EOF)
 	{
 		free(buffer);
-		write(STDOUT, "\n", 1);
+
+		if (isatty(STDIN) != 0)
+			write(STDOUT, "\n", 1);
+
 		exit(EXIT_SUCCESS);
 	}
 
