@@ -27,5 +27,8 @@ int main(void)
 		free(tokens);
 	}
 
+	if (stats == EOF)
+		exit(EXIT_SUCCESS);
+
 	return (0);
 }
