@@ -13,7 +13,7 @@ int builtins(char **ar)
 {
 	char *builts[2] = {"exit", "env"};
 	int i = 0, size_env;
-	char *he = NULL;
+	char *env = NULL;
 
 	/** Exit */
 	if (_strcmp(ar[0], builts[0]) == 0)
@@ -24,9 +24,9 @@ int builtins(char **ar)
 	{
 		for (i = 0; environ[i] != '\0'; i++)
 		{
-			he = environ[i];
-			size_env = _strlen(he);
-			write(STDOUT, he, size_env);
+			env = environ[i];
+			size_env = _strlen(env);
+			write(STDOUT, env, size_env);
 			write(STDOUT, "\n", 1);
 		}
 	}
