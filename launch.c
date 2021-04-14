@@ -30,7 +30,7 @@ int launch(char **ar)
 		_fork(ar);
 
 	else
-		perror("Error");
+		_error(ar[0]);
 
 	if (is_path_calculated == 1)
 		free(ar[0]);
