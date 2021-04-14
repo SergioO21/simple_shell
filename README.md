@@ -39,8 +39,8 @@ Is a command line interpreter that executes commands read from standard input.
  - [ ] lstat (__lxstat) (man 2 lstat)
  - [ ] fstat (__fxstat) (man 2 fstat)
  - [x] strtok (man 3 strtok)
- - [ ] wait (man 2 wait)
- - [x] waitpid (man 2 waitpid)
+ - [x] wait (man 2 wait)
+ - [ ] waitpid (man 2 waitpid)
  - [ ] wait3 (man 2 wait3)
  - [ ] wait4 (man 2 wait4)
  - [x] write (man 2 write)
@@ -58,6 +58,7 @@ Is a command line interpreter that executes commands read from standard input.
  - **builtins** - *Default kernel commands.*
  - **launch** - *Check if the command entered is in the $PATH.*
  - **_fork** - *Create a new process to execute the command entered.*
+ - **_error** - *Print the standard error.*
  - **_strncmp** - *Compare two strings in a specific range*
  - **_strcat** - *Concatenates two strings.*
  - **_strcmp** - *Compares two strings.*
