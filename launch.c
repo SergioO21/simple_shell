@@ -26,7 +26,7 @@ int launch(char **ar)
 	if (_strcmp(exa, ar[0]) != 0)
 		is_path_calculated = 1;
 
-	if (stat(ar[0], &st) == 0)
+	if (stat(ar[0], &st) == 0 && *ar[0] == '/')
 		_fork(ar);
 
 	else
