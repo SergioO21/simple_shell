@@ -23,10 +23,5 @@ void _fork(char **ar)
 		perror("Error: Fork failure");
 
 	else
-	{
-		do {
-			waitpid(pid, &status, WUNTRACED);
-
-		} while (!WIFEXITED(status) && !WIFSIGNALED(status));
-	}
+		wait(&status);
 }
