@@ -21,7 +21,7 @@ char *get_env(void)
 
 	if (ret != NULL)
 	{
-		for (i = 0; ret[i] != '='; i++)
+		while (*ret != '=')
 			ret++;
 
 		ret++;
