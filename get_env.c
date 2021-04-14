@@ -15,13 +15,13 @@ char *get_env(void)
 
 	for (i = 0; env[i] != NULL; i++)
 	{
-		if (_strncmp("PATH=", env[i], 5) == 0)
+		if (_strncmp("PATH", env[i], 4) == 0)
 			ret = env[i];
 	}
 
 	if (ret != NULL)
 	{
-		for (i = 0; i < 5; i++)
+		for (i = 0; ret[i] != "="; i++)
 			ret++;
 	}
 
