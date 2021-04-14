@@ -15,6 +15,7 @@
 #define DELIM " ,!¡¿?\'\"\n\t"
 #define STDOUT STDOUT_FILENO
 #define STDIN STDIN_FILENO
+#define STDERR STDERR_FILENO
 
 extern char **environ;
 

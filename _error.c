@@ -12,6 +12,6 @@ void _error(char *command)
 
 	len = _strlen(command);
 
-	write(STDOUT, command, len);
-	write(STDOUT, ": No such file or directory\n", 28);
+	write(STDERR, command, len);
+	write(STDERR, ": No such file or directory\n", 28);
 }
