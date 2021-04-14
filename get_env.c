@@ -19,8 +19,11 @@ char *get_env(void)
 			ret = env[i];
 	}
 
-	for (i = 0; i < 5; i++)
-		ret++;
+	if (ret != NULL)
+	{
+		for (i = 0; i < 5; i++)
+			ret++;
+	}
 
 	return (ret);
 }

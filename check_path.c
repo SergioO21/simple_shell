@@ -17,31 +17,35 @@ char *check_path(char **ar)
 	struct stat st;
 
 	env = get_env();
-	name = ar[0];
 
-	size_name = _strlen(name);
-	ex = malloc(sizeof(char) * _strlen(env) + 1);
-	ex = _strcpy(ex, env);
-	path = strtok(ex, ":");
-
-	while (path != NULL)
+	if (env != NULL)
 	{
-		size = _strlen(path) + size_name + 2;
-		value = malloc(sizeof(char) * size);
+		name = ar[0];
 
-		value = _strcpy(value, path);
-		value = _strcat(value, "/");
-		value = _strcat(value, name);
+		size_name = _strlen(name);
+		ex = malloc(sizeof(char) * _strlen(env) + 1);
+		ex = _strcpy(ex, env);
+		path = strtok(ex, ":");
 
-		if (stat(value, &st) == 0 && st.st_mode & X_OK)
+		while (path != NULL)
 		{
-			free(ex);
-			return (value);
-		}
+			size = _strlen(path) + size_name + 2;
+			value = malloc(sizeof(char) * size);
 
-		path = strtok(NULL, ":");
-		free(value);
+			value = _strcpy(value, path);
+			value = _strcat(value, "/");
+			value = _strcat(value, name);
+
+			if (stat(value, &st) == 0 && st.st_mode & X_OK)
+			{
+				free(ex);
+				return (value);
+			}
+
+			path = strtok(NULL, ":");
+			free(value);
+		}
+		free(ex);
 	}
-	free(ex);
 	return (name);
 }
