@@ -16,11 +16,11 @@ int builtins(char **ar)
 	char *env = NULL;
 
 	/** Exit */
-	if (_strcmp(ar[0], builts[0]) == 0)
+	if (_strcmp(builts[0], ar[0]) == 0)
 		return (-1);
 
 	/** env */
-	else if (_strcmp(ar[0], builts[1]) == 0)
+	else if (_strcmp(builts[1], ar[0]) == 0)
 	{
 		for (i = 0; environ[i] != '\0'; i++)
 		{
