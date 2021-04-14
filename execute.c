@@ -15,10 +15,10 @@ int execute(char **ar)
 	if (*ar == NULL)
 		return (1);
 
-	else if (_strcmp(ar[0], builts[0]) == 0)
+	else if (_strcmp(builts[0], ar[0]) == 0)
 		return (builtins(ar));
 
-	else if (_strcmp(ar[0], builts[1]) == 0)
+	else if (_strcmp(builts[1], ar[0]) == 0)
 		return (builtins(ar));
 
 	else
