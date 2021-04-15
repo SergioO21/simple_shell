@@ -4,11 +4,12 @@
  * launch - Check if the command entered is in the $PATH.
  *
  * @ar: Entered commands.
+ * @exit_value: Exit value.
  *
  * Return: Always (0);
  */
 
-int launch(char **ar)
+int launch(char **ar, int exit_value)
 {
 	int is_path_calculated = 0;
 	struct stat st;
@@ -27,15 +28,18 @@ int launch(char **ar)
 		is_path_calculated = 1;
 
 	if (stat(ar[0], &st) == 0)
-		_fork(ar);
+		exit_value = _fork(ar, exit_value);
 
 	else
+	{
 		_error(ar[0]);
+		exit_value = 127;
+	}
 
 	if (is_path_calculated == 1)
 		free(ar[0]);
 
 	free(exa);
 
-	return (0);
+	return (exit_value);
 }

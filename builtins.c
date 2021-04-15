@@ -4,12 +4,14 @@
  * builtins - Default kernel commands.
  *
  * @ar: Entered commands.
+ * @exit_value: Exit value.
+ * @line: Entered arguments.
  *
  * Return: If entered "exit", returns (-1).
  *         Else, always returns (0);
  */
 
-int builtins(char **ar)
+int builtins(char **ar, int exit_value, char *line)
 {
 	char *builts[2] = {"exit", "env"};
 	int i = 0, size_env;
@@ -17,7 +19,11 @@ int builtins(char **ar)
 
 	/** Exit */
 	if (_strcmp(builts[0], ar[0]) == 0)
-		return (-1);
+	{
+		free(ar);
+		free(line);
+		exit(exit_value);
+	}
 
 	/** env */
 	else if (_strcmp(builts[1], ar[0]) == 0)

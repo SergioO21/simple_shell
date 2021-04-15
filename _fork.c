@@ -4,9 +4,12 @@
  * _fork - Create a new process to execute the command entered.
  *
  * @ar: Entered commands.
+ * @exit_value: Exit value.
+ *
+ * Return: Exit value.
  */
 
-void _fork(char **ar)
+int _fork(char **ar, int exit_value)
 {
 	pid_t pid;
 	int status;
@@ -23,5 +26,12 @@ void _fork(char **ar)
 		perror("Error: Fork failure");
 
 	else
+	{
 		wait(&status);
+
+		if (WIFEXITED(status))
+			exit_value = WEXITSTATUS(status);
+	}
+
+	return (exit_value);
 }

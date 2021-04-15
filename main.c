@@ -10,9 +10,9 @@ int main(void)
 {
 	char *line = NULL;
 	char **tokens = NULL;
-	int stats = 0;
+	int exit_value = 0;
 
-	while (stats != EOF)
+	while (1)
 	{
 		signal(SIGINT, _signal);
 
@@ -21,14 +21,11 @@ int main(void)
 
 		line = read_line();
 		tokens = tokenize(line);
-		stats = execute(tokens);
+		exit_value = execute(tokens, exit_value, line);
 
 		free(line);
 		free(tokens);
 	}
-
-	if (stats == EOF)
-		exit(2);
 
 	return (0);
 }
