@@ -28,7 +28,7 @@ int main(void)
 	}
 
 	if (stats == EOF)
-		exit(EXIT_SUCCESS);
+		exit(2);
 
 	return (0);
 }
