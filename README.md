@@ -120,7 +120,7 @@ man -l man_1_simple_shell
 ## Flowchart:
 <details>
        <summary>Click to view the flowchart</summary>
-       <img src= "https://as2.ftcdn.net/jpg/01/75/24/27/500_F_175242734_hrTXihZmuKPyw3euytsp1pY4s74yBGrj.jpg" />
+       <img src= "https://github.com/SergioO21/simple_shell/blob/main/Flowchart_shell.png" />
 </details>
 
 #### Finished in 14 / 04 / 2021. ####
