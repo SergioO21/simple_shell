@@ -23,14 +23,8 @@ int main(void)
 		tokens = tokenize(line);
 		exit_value = execute(tokens, exit_value, line);
 
-		if (isatty(STDIN))
-		{
-			free(line);
-			free(tokens);
-		}
-
-		else
-			builtins(tokens, exit_value, line, "exit");
+		free(line);
+		free(tokens);
 	}
 
 	return (0);

@@ -6,20 +6,19 @@
  * @ar: Entered commands.
  * @exit_value: Exit value.
  * @line: Entered arguments.
- * @_exit: Exit condition.
  *
  * Return: If entered "exit", returns (-1).
  *         Else, always returns (0);
  */
 
-int builtins(char **ar, int exit_value, char *line, char *_exit)
+int builtins(char **ar, int exit_value, char *line)
 {
 	char *builts[2] = {"exit", "env"};
 	int i = 0, size_env;
 	char *env = NULL;
 
 	/** Exit */
-	if (_strcmp(builts[0], ar[0]) == 0 || _strcmp(builts[0], _exit) == 0)
+	if (_strcmp(builts[0], ar[0]) == 0)
 	{
 		free(ar);
 		free(line);
