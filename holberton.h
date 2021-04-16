@@ -23,7 +23,7 @@ extern char **environ;
 char **tokenize(char *buffer);
 char *check_path(char **ar);
 void _error(char *command);
-int builtins(char **ar, int exit_value, char *line);
+int builtins(char **ar, int exit_value, char *line, char *_exit);
 int execute(char **ar, int exit_value, char *line);
 int _fork(char **ar, int exit_value);
 int launch(char **ar, int exit_value);

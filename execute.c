@@ -18,10 +18,10 @@ int execute(char **ar, int exit_value, char *line)
 		return (1);
 
 	else if (_strcmp(builts[0], ar[0]) == 0)
-		return (builtins(ar, exit_value, line));
+		return (builtins(ar, exit_value, line, NULL));
 
 	else if (_strcmp(builts[1], ar[0]) == 0)
-		return (builtins(ar, exit_value, line));
+		return (builtins(ar, exit_value, line, NULL));
 
 	else
 		return (launch(ar, exit_value));
